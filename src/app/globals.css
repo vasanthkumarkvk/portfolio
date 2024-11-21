@@ -28,8 +28,10 @@
 
     
   .p-dock .p-dock-list-container{
-    border-radius: 0px;
+    border-radius: 17px;
     padding: 0px;
+    width: 100%;
+   
   }
 
   .custom-dock {
@@ -110,6 +112,19 @@
       width: calc(184% + 1.3px);
       height: 121px;
   }
+
+
+  .concept-two {
+    gap: 16px !important;
+    font-size: 25px !important;
+    margin-top: 19px !important;
+  }
+
+  .custom-shape-divider-bottom-1725359123{
+    display: none;
+  }
+
+
 }
 
 .concept-two {

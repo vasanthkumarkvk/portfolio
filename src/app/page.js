@@ -4,12 +4,10 @@ import { Dock } from "primereact/dock";
 import "primereact/resources/themes/saga-blue/theme.css"; // or your preferred theme
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
-import user from "../../img/user.png";
-import { FaInstagramSquare } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import logo from '../../img/user.png';
+import logo from '../../img/user.jpg';
 
 //technology icons
 import { FaPhp } from "react-icons/fa6";
@@ -46,12 +44,12 @@ export default function Home() {
 
   return (
     <main className="" id="home">
-      <Dock model={items} position="left" className="custom-dock fixed " />
+      <Dock model={items} position="bottom" className="custom-dock fixed " />
 
-      <div className="w-full h-[100vh] bg-[#1f4f66]">
-        <div className="flex flex-row w-full h-[100%] ">
-          <div className="flex w-[50%]  p-[10px] ">
-            <div className="flex  justify-center flex-col items-center  p-[100px] w-[100%] ">
+      <div className="w-full sm:h-[100vh] sm:bg-[#1f4f66] bg-[#1f4f66] sm:rounded-[0px] rounded-b-[10px]">
+        <div className="flex flex-col-reverse  sm:flex-row sm:w-full sm:h-[100%] ">
+          <div className="sm:flex sm:w-[50%]  sm:p-[10px] ">
+            <div className="flex  sm:justify-center sm:flex-col items-center  flex-col sm:p-[100px] sm:w-[100%] ">
               <div class="concept concept-two" >
                 <div class="hover">
                   <h1>V</h1>
@@ -79,9 +77,9 @@ export default function Home() {
                 {" "}
                 FULLSTACK DEVELOPER
               </p>
-              <p className="text-white text-[22px] "> test text here ???</p>
+              {/* <p className="text-white text-[22px] "> test text here ???</p> */}
 
-              <div className="flex flex-row items-center justify-center gap-[25px] pt-[30px] w-[100%] ">
+              <div className="flex flex-row items-center justify-center gap-[25px] sm:pt-[30px] pt-[10px] sm:pb-[0px] pb-[10px] w-[100%] ">
                 <div className="transition duration-150 ease-out hover:scale-[130%] ">
                   <TiSocialLinkedinCircular
                     color="#0A66C2"
@@ -108,10 +106,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex w-[50%] items-center justify-center h-[100%]  p-[150px]">
-            <div className="w-[100%] bg-white h-[100%] rounded-[20px] shadow-xl shadow-cyan-500/50 ">
+          <div className="flex sm:w-[50%] items-center mt-[30px] sm:mt-[0] justify-center   sm:p-[150px] ">
+            <div className="sm:w-[100%] w-[70%] bg-white h-[100%] rounded-[20px] sm:shadow-xl shadow-cyan-500/50 ">
 
-              <Image src={logo} className="p-[30px]"></Image>
+              <Image src={logo} className="sm:p-[30px]  p-[10px] sm:rounded-[0px] rounded-[25px]"></Image>
             </div>
           </div>
         </div>
@@ -132,12 +130,12 @@ export default function Home() {
       </div>
 
       <div className="w-full  bg-green-200 mb-[15px]" id="about" >
-        <div className="bg-white flex items-center justify-center w-full  pl-[100px] pr-[100px] flex-col">
+        <div className="bg-white flex items-center justify-center w-full  sm:pl-[100px] sm:pr-[100px] flex-col text-center">
         <h2 className="text-[29px] font-bold text-center">About Me...</h2>
 
-        <h3 className="text-[20px] p-[20px]">VASANTH - Full Stack Developer from Chennai</h3>
+        <h3 className="text-[20px]sm: p-[20px]">VASANTH - Full Stack Developer from Chennai</h3>
         
-          <p className="text-center pl-[50px] pr-[50px] text-[18px]">
+          <p className="text-center sm:pl-[50px] sm:pr-[50px] text-[18px] p-[10px]">
 
 Hello! I’m Vasanth, a BE graduate from Chennai with a strong
  passion for web development. After completing my studies,
