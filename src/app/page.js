@@ -7,7 +7,6 @@ import "primeicons/primeicons.css";
 import { FaGithub } from "react-icons/fa6";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import logo from '../../img/user.jpg';
 
 
 export default function Home() {
@@ -104,12 +103,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex sm:w-[50%] items-center mt-[30px] sm:mt-[0] justify-center   sm:p-[150px] ">
-            <div className="sm:w-[100%] w-[70%] bg-white h-[100%] rounded-[20px] sm:shadow-xl shadow-cyan-500/50 ">
+        <div className="flex sm:w-[50%] items-center mt-[30px] sm:mt-[0] justify-center sm:p-[150px]">
+  <div className="sm:w-[100%] w-[70%] bg-white h-[100%] rounded-[20px] sm:shadow-xl shadow-cyan-500/50">
+    <img
+      src="https://i.ibb.co/rZNcVdY/photo.jpg"
+      width="500"
+      height="300"
+      className="sm:p-[30px] p-[10px] sm:rounded-[0px] rounded-[25px]"
+      alt="Descriptive Alt Text"
+    />
+  </div>
+</div>
 
-              <Image src={logo} className="sm:p-[30px]  p-[10px] sm:rounded-[0px] rounded-[25px]"></Image>
-            </div>
-          </div>
+
+
+
         </div>
 
         <div class="custom-shape-divider-bottom-1725359123" >
