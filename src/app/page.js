@@ -9,8 +9,6 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import logo from '../../img/user.jpg';
 
-//technology icons
-import { FaPhp } from "react-icons/fa6";
 
 export default function Home() {
   const items = [
@@ -77,7 +75,7 @@ export default function Home() {
                 {" "}
                 FULLSTACK DEVELOPER
               </p>
-              {/* <p className="text-white text-[22px] "> test text here ???</p> */}
+              <p className="text-white text-[22px] "> test text here ???</p>
 
               <div className="flex flex-row items-center justify-center gap-[25px] sm:pt-[30px] pt-[10px] sm:pb-[0px] pb-[10px] w-[100%] ">
                 <div className="transition duration-150 ease-out hover:scale-[130%] ">
