@@ -1,112 +1,161 @@
+"use client";
 import Image from "next/image";
+import { Dock } from "primereact/dock";
+import "primereact/resources/themes/saga-blue/theme.css"; // or your preferred theme
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import user from "../../img/user.png";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import logo from '../../img/user.png';
+
+//technology icons
+import { FaPhp } from "react-icons/fa6";
 
 export default function Home() {
+  const items = [
+    {
+      label: "Home",
+      icon: "pi pi-home", // Updated icon
+      command: () => (window.location.hash = "#home"),
+    },
+    {
+      label: "About",
+      icon: "pi pi-user", // Updated icon
+      command: () => (window.location.hash = "#about"),
+    },
+    {
+      label: "Portfolio",
+      icon: "pi pi-briefcase", // Updated icon
+      command: () => (window.location.hash = "/portfolio"),
+    },
+    {
+      label: "Experience",
+      icon: "pi pi-calendar", // Updated icon
+      command: () => (window.location.hash = "/experience"),
+    },
+   
+    {
+      label: "Contact",
+      icon: "pi pi-envelope", // Updated icon
+      command: () => (window.location.hash = "/contact"),
+    },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="" id="home">
+      <Dock model={items} position="left" className="custom-dock fixed " />
+
+      <div className="w-full h-[100vh] bg-[#1f4f66]">
+        <div className="flex flex-row w-full h-[100%] ">
+          <div className="flex w-[50%]  p-[10px] ">
+            <div className="flex  justify-center flex-col items-center  p-[100px] w-[100%] ">
+              <div class="concept concept-two" >
+                <div class="hover">
+                  <h1>V</h1>
+                </div>
+                <div class="hover">
+                  <h1>A</h1>
+                </div>
+                <div class="hover">
+                  <h1>S</h1>
+                </div>
+                <div class="hover">
+                  <h1>A</h1>
+                </div>
+                <div class="hover">
+                  <h1>N</h1>
+                </div>
+                <div class="hover">
+                  <h1>T</h1>
+                </div>
+                <div class="hover">
+                  <h1>H</h1>
+                </div>
+              </div>
+              <p className="text-white font-bold text-[22px] ">
+                {" "}
+                FULLSTACK DEVELOPER
+              </p>
+              <p className="text-white text-[22px] "> test text here ???</p>
+
+              <div className="flex flex-row items-center justify-center gap-[25px] pt-[30px] w-[100%] ">
+                <div className="transition duration-150 ease-out hover:scale-[130%] ">
+                  <TiSocialLinkedinCircular
+                    color="#0A66C2"
+                    size={38}
+                    className="cursor-pointer   bg-white rounded-[10px] p-[3px] "
+                  />
+                </div>
+                <div className="transition duration-150 ease-out hover:scale-[130%]">
+                  {" "}
+                  <FaGithub
+                    size={38}
+                    color="#181717"
+                    className="cursor-pointer bg-white rounded-[10px] p-[3px] "
+                  />
+                </div>
+                <div className="transition duration-150 ease-out hover:scale-[130%]">
+                  <IoLogoWhatsapp
+                    size={38}
+                    color="#25D366"
+                    className="cursor-pointer bg-white rounded-[10px] p-[3px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex w-[50%] items-center justify-center h-[100%]  p-[150px]">
+            <div className="w-[100%] bg-white h-[100%] rounded-[20px] shadow-xl shadow-cyan-500/50 ">
+
+              <Image src={logo} className="p-[30px]"></Image>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-shape-divider-bottom-1725359123" >
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"
+            ></path>
+          </svg>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="w-full  bg-green-200 mb-[15px]" id="about" >
+        <div className="bg-white flex items-center justify-center w-full  pl-[100px] pr-[100px] flex-col">
+        <h2 className="text-[29px] font-bold text-center">About Me...</h2>
+
+        <h3 className="text-[20px] p-[20px]">VASANTH - Full Stack Developer from Chennai</h3>
+        
+          <p className="text-center pl-[50px] pr-[50px] text-[18px]">
+
+Hello! I’m Vasanth, a BE graduate from Chennai with a strong
+ passion for web development. After completing my studies,
+  I pursued programming and began my career as a web developer. Currently,
+   I’m a Full Stack Developer at VSM Global. Over the years,
+    I’ve honed my skills in various technologies, including PHP, 
+    JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS, and AJAX.
+     I also have experience with WordPress and have built both frontend and full-stack websites.
+
+I’ve developed and published more than 15 websites online, demonstrating my 
+expertise across diverse platforms and frameworks. My journey from web development 
+to full stack has equipped me with a comprehensive understanding of the entire development 
+process, from initial design to deployment </p>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="w-full h-[400px] bg-yellow-200"> 
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
   );
