@@ -7,6 +7,9 @@ import "primeicons/primeicons.css";
 import { FaGithub } from "react-icons/fa6";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoWhatsapp } from "react-icons/io5";
+import { FaLongArrowAltRight } from "react-icons/fa";
+
+import image1 from "../../img/about2.jpg";
 
 
 export default function Home() {
@@ -70,21 +73,19 @@ export default function Home() {
                   <h1>H</h1>
                 </div>
               </div>
-              <p className="text-white font-bold text-[22px] ">
-                {" "}
-                FULLSTACK DEVELOPER
-              </p>
-              <p className="text-white text-[22px] "> test text here ???</p>
+              <p className="text-white font-bold text-[22px] text-center ">
+                "Hi, I'm , a Full-Stack Developer passionate about building scalable web solutions."
+                </p>
 
               <div className="flex flex-row items-center justify-center gap-[25px] sm:pt-[30px] pt-[10px] sm:pb-[0px] pb-[10px] w-[100%] ">
-                <div className="transition duration-150 ease-out hover:scale-[130%] ">
+                <div className="transition duration-500 ease-out hover:scale-[130%] ">
                   <TiSocialLinkedinCircular
                     color="#0A66C2"
                     size={38}
                     className="cursor-pointer   bg-white rounded-[10px] p-[3px] "
                   />
                 </div>
-                <div className="transition duration-150 ease-out hover:scale-[130%]">
+                <div className="transition duration-500 ease-out hover:scale-[130%]">
                   {" "}
                   <FaGithub
                     size={38}
@@ -92,7 +93,7 @@ export default function Home() {
                     className="cursor-pointer bg-white rounded-[10px] p-[3px] "
                   />
                 </div>
-                <div className="transition duration-150 ease-out hover:scale-[130%]">
+                <div className="transition duration-500 ease-out hover:scale-[130%]">
                   <IoLogoWhatsapp
                     size={38}
                     color="#25D366"
@@ -100,16 +101,27 @@ export default function Home() {
                   />
                 </div>
               </div>
+  
+
+              <div className="h-[100px] w-full">
+    <div className="flex items-center justify-center w-full h-full">
+      <div className="flex items-center text-[20px] p-[6px] transition-all duration-500 ease-out pr-[20px] pl-[20px] bg-white rounded-[10px] group hover:bg-black hover:text-white">
+        <button className="rounded-[10px]">Projects</button>
+        <FaLongArrowAltRight className="ml-2 transform transition-all duration-500 ease-out group-hover:translate-x-4" />
+      </div>
+    </div>
+  </div>
+
+
+
             </div>
           </div>
 
         <div className="flex sm:w-[50%] items-center mt-[30px] sm:mt-[0] justify-center sm:p-[150px]">
-  <div className="sm:w-[100%] w-[70%] bg-white h-[100%] rounded-[20px] sm:shadow-xl shadow-cyan-500/50">
+  <div className="sm:w-[100%]  w-[70%] bg-white flex items-center justify-center h-[100%] rounded-[20px] sm:shadow-xl shadow-cyan-500/50">
     <img
       src="https://i.ibb.co/rZNcVdY/photo.jpg"
-      width="500"
-      height="300"
-      className="sm:p-[30px] p-[10px] sm:rounded-[0px] rounded-[25px]"
+      className="sm:p-[10px] p-[10px] sm:rounded-[0px] rounded-[25px] h-[100%] w-[90%]"
       alt="Descriptive Alt Text"
     />
   </div>
@@ -135,28 +147,41 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full  bg-green-200 mb-[15px]" id="about" >
-        <div className="bg-white flex items-center justify-center w-full  sm:pl-[100px] sm:pr-[100px] flex-col text-center">
-        <h2 className="text-[29px] font-bold text-center">About Me...</h2>
 
-        <h3 className="text-[20px]sm: p-[20px]">VASANTH - Full Stack Developer from Chennai</h3>
-        
-          <p className="text-center sm:pl-[50px] sm:pr-[50px] text-[18px] p-[10px]">
+{/* about section */}
+      <div className="w-full bg-green-200 mb-[15px]" id="about">
+  <div className="bg-white flex sm:flex-row flex-col items-center justify-center w-full sm:px-[100px] py-10">
+  <div className="w-full sm:w-1/2 mb-8 sm:mb-0 sm:pr-8 overflow-hidden">
+  <Image
+    src={image1}
+    alt="Vasanth"
+    className="rounded-r-[45px] w-full h-auto shadow-lg animate-moveLeftRight"
+  />
+</div>
 
-Hello! I’m Vasanth, a BE graduate from Chennai with a strong
- passion for web development. After completing my studies,
-  I pursued programming and began my career as a web developer. Currently,
-   I’m a Full Stack Developer at VSM Global. Over the years,
-    I’ve honed my skills in various technologies, including PHP, 
-    JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS, and AJAX.
-     I also have experience with WordPress and have built both frontend and full-stack websites.
+    <div className="w-full sm:w-1/2 text-center sm:text-left">
+      <h2 className="text-[29px] font-bold mb-4">About Me...</h2>
+      <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px]">VASANTH - Full Stack Developer from Chennai</h3>
+      
+      <p className="text-[18px] text-gray-700 sm:pl-[50px] sm:pr-[50px]">
+        Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
+        After completing my studies, I pursued programming and began my career as a web developer. 
+        Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
+        various technologies, including PHP, JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS, 
+        and AJAX. I also have experience with WordPress and have built both frontend and full-stack websites.
 
-I’ve developed and published more than 15 websites online, demonstrating my 
-expertise across diverse platforms and frameworks. My journey from web development 
-to full stack has equipped me with a comprehensive understanding of the entire development 
-process, from initial design to deployment </p>
-        </div>
-      </div>
+        I’ve developed and published more than 15 websites online, demonstrating my expertise across 
+        diverse platforms and frameworks. My journey from web development to full stack has equipped me 
+        with a comprehensive understanding of the entire development process, from initial design to deployment.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
       <div className="w-full h-[400px] bg-yellow-200"> 
 
