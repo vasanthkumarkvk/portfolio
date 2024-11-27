@@ -3,6 +3,78 @@
 @tailwind utilities;
 
 
+/* banner styles */
+
+div#banner_bg{
+  background-image: url("../../img/banner-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+div#bg_imag1,div#bg_imag2,div#bg_imag3{
+background-image: url(../../img/banner-box.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* globals.css */
+
+.animate-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: reveal 6s ease-in-out infinite; /* Increased duration to 6s for slower effect */
+}
+
+.animate-letter:nth-child(1) {
+  animation-delay: 0.5s; /* Spread out the delays for smooth transitions */
+}
+.animate-letter:nth-child(2) {
+  animation-delay: 1s;
+}
+.animate-letter:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.animate-letter:nth-child(4) {
+  animation-delay: 2s;
+}
+.animate-letter:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.animate-letter:nth-child(6) {
+  animation-delay: 3s;
+}
+.animate-letter:nth-child(7) {
+  animation-delay: 3.5s;
+  padding-right: 5px;
+}
+.animate-letter:nth-child(8) {
+  animation-delay: 4s;
+}
+
+/* Keyframes for reveal animation */
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1; /* Hold the visibility for a bit longer */
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+div#animate_name{
+  font-size: 20px !important;
+  display: inline !important;
+}
+
 .custom-dock {
     /* background-color: #ffffff; Dark background */
     border-radius: 15px; /* Rounded corners */
@@ -43,6 +115,10 @@
     font-size: 17px !important;
     transform: scale(1.0); /* Slightly enlarge on hover */
     color: rgb(255, 255, 255);
+  }
+  div#animate_name{
+    font-size: 15px !important;
+    display: inline !important;
   }
   }
 

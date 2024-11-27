@@ -9,7 +9,9 @@ import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-import image1 from "../../img/about2.jpg";
+import image1 from "../../img/about2.png";
+import user from "../../img/user.png";
+
 
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
@@ -58,9 +60,9 @@ export default function Home() {
     <main className="" id="home">
       <Dock model={items} position="bottom" className="custom-dock fixed " />
 
-      <div className="w-full sm:h-[100vh] sm:bg-[#1f4f66] bg-[#1f4f66] sm:rounded-[0px] rounded-b-[10px]">
+      <div className="w-full sm:h-[100vh] " id="banner_bg">
         <div className="flex flex-col-reverse  sm:flex-row sm:w-full sm:h-[100%] ">
-          <div className="sm:flex sm:w-[50%]  sm:p-[10px] ">
+          <div className="sm:flex sm:w-[80%]   sm:p-[10px] ">
             <div className="flex  sm:justify-center sm:flex-col items-center  flex-col sm:p-[100px] sm:w-[100%] ">
               <div class="concept concept-two" >
                 <div class="hover">
@@ -84,10 +86,28 @@ export default function Home() {
                 <div class="hover">
                   <h1>H</h1>
                 </div>
+                <div class="hover">
+                  <h1></h1>
+                </div>
+                <div class="hover">
+                  <h1>K</h1>
+                </div>
               </div>
-              <p className="text-white font-bold text-[22px] text-center ">
-                "Hi, I'm , a Full-Stack Developer passionate about building scalable web solutions."
-                </p>
+  
+
+              <div className="text-white font-bold text-[15px] sm:text-[20px] text-center ">
+                "Hi, I'm   <div class="concept concept-two flex" id="animate_name">
+  <span class="animate-letter">V</span>
+  <span class="animate-letter">A</span>
+  <span class="animate-letter">S</span>
+  <span class="animate-letter">A</span>
+  <span class="animate-letter">N</span>
+  <span class="animate-letter">T</span>
+  <span class="animate-letter">H</span>
+
+  <span class="animate-letter">K</span>
+</div>, a Full-Stack Developer passionate about building <br /> scalable web solutions."
+                </div>
 
               <div className="flex flex-row items-center justify-center gap-[25px] sm:pt-[30px] pt-[10px] sm:pb-[0px] pb-[10px] w-[100%] ">
                 <div className="transition duration-500 ease-out hover:scale-[130%] ">
@@ -124,20 +144,29 @@ export default function Home() {
     </div>
   </div>
 
+  <div className="flex w-full sm:mb-0 mb-[40px] ">
+    <div className="flex sm:flex-row flex-col justify-between items-center sm:gap-0 gap-[30px] w-full ">
+      <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag1"></div>
+      <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag2"></div>
+      <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag3"></div>
+    </div>
+  </div>
+
 
 
             </div>
           </div>
 
-        <div className="flex sm:w-[50%] items-center mt-[30px] sm:mt-[0] justify-center sm:p-[150px]">
-  <div className="sm:w-[100%]  w-[70%] bg-white flex items-center justify-center h-[100%] rounded-[20px] sm:shadow-xl shadow-cyan-500/50">
-    <img
-      src="https://i.ibb.co/rZNcVdY/photo.jpg"
-      className="sm:p-[10px] p-[10px] sm:rounded-[0px] rounded-[25px] h-[100%] w-[90%]"
-      alt="Descriptive Alt Text"
+          <div className="flex sm:w-[20%]   items-center justify-center sm:mb-[190px] sm:mr-[50px] ">
+  <div className="flex items-center justify-center rounded-full  sm:shadow-xl shadow-cyan-500/50 overflow-hidden  ">
+    <Image
+      src={user}
+      alt="User Image"
+      className="object-cover sm:h-full sm:w-full w-[100%] h-[100%]"
     />
   </div>
 </div>
+
 
 
 
@@ -172,34 +201,19 @@ export default function Home() {
 </div>
 
     <div className="w-full sm:w-1/2 text-center sm:text-left">
-      <h2 className="text-[29px] font-bold mb-4">About Me...</h2>
-      <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px]">VASANTH - Full Stack Developer from Chennai</h3>
+      <h2 className="text-[29px] font-bold mb-4 text-center" >About Me...</h2>
+      <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px] text-center">VASANTH - Full Stack Developer from Chennai</h3>
       
-      <p className="text-[18px] text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7">
-  Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
-  After completing my studies, I pursued programming and began my career as a web developer. 
-  Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
-  various technologies, including:
-  <span className="ruby sm:inline-flex items-center gap-2">
-    <FaHtml5 className="text-orange-600" title="HTML" />HTML,
-    <FaCss3Alt className="text-blue-600" title="CSS" />CSS,
-    <TbBrandJavascript className="text-yellow-500" title="JavaScript" />JavaScript,
-    <FaBootstrap className="text-purple-700" title="Bootstrap" />Bootstrap,
-    <RiNextjsFill className="text-black" title="Next.js" /> Next.js,
-    <RiTailwindCssFill className="text-blue-400" title="Tailwind CSS"/>
-  </span>
-  Tailwind CSS.
-  <span className="inline-flex items-center gap-2">
-    <FaPhp className="text-indigo-600" title="PHP" /> PHP,
-    <SiMysql className="text-blue-500" title="MySQL" /> MySQL,
-    <span className="text-gray-700">AJAX</span>, 
-    <span className="text-gray-700">jQuery</span>.
-  </span>
-  I also have experience with 
-  <span className="inline-flex items-center gap-2">
-    <FaWordpress className="text-blue-600" title="WordPress" /> WordPress
-  </span>
-  and have built both frontend and full-stack websites.
+      <p className="text-[15px] text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7 text-center">
+      Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
+        After completing my studies, I pursued programming and began my career as a web developer. 
+        Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
+        various technologies, including PHP, JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS, 
+        and AJAX. I also have experience with WordPress and have built both frontend and full-stack websites.
+
+        I’ve developed and published more than 15 websites online, demonstrating my expertise across 
+        diverse platforms and frameworks. My journey from web development to full stack has equipped me 
+        with a comprehensive understanding of the entire development process, from initial design to deployment.
 </p>
 
 
