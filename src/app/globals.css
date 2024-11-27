@@ -124,6 +124,9 @@
     display: none;
   }
 
+  span.ruby.sm\:inline-flex.items-center.gap-2 {
+    display: ruby;
+}
 
 }
 

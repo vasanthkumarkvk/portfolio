@@ -11,6 +11,18 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 import image1 from "../../img/about2.jpg";
 
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { TbBrandJavascript } from "react-icons/tb";
+import { FaBootstrap } from "react-icons/fa6";
+import { RiNextjsFill } from "react-icons/ri";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaPhp } from "react-icons/fa6";
+import { SiMysql } from "react-icons/si";
+import { FaWordpress } from "react-icons/fa";
+
+
+
 
 export default function Home() {
   const items = [
@@ -163,23 +175,59 @@ export default function Home() {
       <h2 className="text-[29px] font-bold mb-4">About Me...</h2>
       <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px]">VASANTH - Full Stack Developer from Chennai</h3>
       
-      <p className="text-[18px] text-gray-700 sm:pl-[50px] sm:pr-[50px]">
-        Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
-        After completing my studies, I pursued programming and began my career as a web developer. 
-        Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
-        various technologies, including PHP, JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS, 
-        and AJAX. I also have experience with WordPress and have built both frontend and full-stack websites.
+      <p className="text-[18px] text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7">
+  Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
+  After completing my studies, I pursued programming and began my career as a web developer. 
+  Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
+  various technologies, including:
+  <span className="ruby sm:inline-flex items-center gap-2">
+    <FaHtml5 className="text-orange-600" title="HTML" />HTML,
+    <FaCss3Alt className="text-blue-600" title="CSS" />CSS,
+    <TbBrandJavascript className="text-yellow-500" title="JavaScript" />JavaScript,
+    <FaBootstrap className="text-purple-700" title="Bootstrap" />Bootstrap,
+    <RiNextjsFill className="text-black" title="Next.js" /> Next.js,
+    <RiTailwindCssFill className="text-blue-400" title="Tailwind CSS"/>
+  </span>
+  Tailwind CSS.
+  <span className="inline-flex items-center gap-2">
+    <FaPhp className="text-indigo-600" title="PHP" /> PHP,
+    <SiMysql className="text-blue-500" title="MySQL" /> MySQL,
+    <span className="text-gray-700">AJAX</span>, 
+    <span className="text-gray-700">jQuery</span>.
+  </span>
+  I also have experience with 
+  <span className="inline-flex items-center gap-2">
+    <FaWordpress className="text-blue-600" title="WordPress" /> WordPress
+  </span>
+  and have built both frontend and full-stack websites.
+</p>
 
-        I’ve developed and published more than 15 websites online, demonstrating my expertise across 
-        diverse platforms and frameworks. My journey from web development to full stack has equipped me 
-        with a comprehensive understanding of the entire development process, from initial design to deployment.
-      </p>
+
     </div>
   </div>
 </div>
 
+{/* skill section */}
 
 
+<div className="bg-blue-200 h-full w-full">
+
+<div>
+
+<div><FaHtml5 /></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+<div>
+
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+</div>
 
 
 
