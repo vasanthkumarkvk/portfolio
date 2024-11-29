@@ -13,15 +13,7 @@ import image1 from "../../img/about2.png";
 import user from "../../img/user.png";
 
 
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { TbBrandJavascript } from "react-icons/tb";
-import { FaBootstrap } from "react-icons/fa6";
-import { RiNextjsFill } from "react-icons/ri";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaPhp } from "react-icons/fa6";
-import { SiMysql } from "react-icons/si";
-import { FaWordpress } from "react-icons/fa";
+import Skills from "./components/skills";
 
 
 
@@ -39,9 +31,9 @@ export default function Home() {
       command: () => (window.location.hash = "#about"),
     },
     {
-      label: "Portfolio",
+      label: "Skills",
       icon: "pi pi-briefcase", // Updated icon
-      command: () => (window.location.hash = "/portfolio"),
+      command: () => (window.location.hash = "#skills"),
     },
     {
       label: "Experience",
@@ -55,6 +47,9 @@ export default function Home() {
       command: () => (window.location.hash = "/contact"),
     },
   ];
+
+
+  
 
   return (
     <main className="" id="home">
@@ -201,10 +196,10 @@ export default function Home() {
 </div>
 
     <div className="w-full sm:w-1/2 text-center sm:text-left">
-      <h2 className="text-[29px] font-bold mb-4 text-center" >About Me...</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center" >About Me...</h2>
       <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px] text-center">VASANTH - Full Stack Developer from Chennai</h3>
       
-      <p className="text-[15px] text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7 text-center">
+      <p className="text-lg text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7 text-center">
       Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
         After completing my studies, I pursued programming and began my career as a web developer. 
         Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
@@ -221,28 +216,8 @@ export default function Home() {
   </div>
 </div>
 
-{/* skill section */}
-
-
-<div className="bg-blue-200 h-full w-full">
-
-<div>
-
-<div><FaHtml5 /></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
-
-<div>
-
-<div></div>
-<div></div>
-<div></div>
-</div>
-
-</div>
-
+{/* Skill Section */}
+<Skills />
 
 
       <div className="w-full h-[400px] bg-yellow-200"> 
