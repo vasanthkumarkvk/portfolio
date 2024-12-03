@@ -57,7 +57,16 @@ export default function Home() {
 
       <div className="w-full sm:h-[100vh] " id="banner_bg">
         <div className="flex flex-col-reverse  sm:flex-row sm:w-full sm:h-[100%] ">
-          <div className="sm:flex sm:w-[80%]   sm:p-[10px] ">
+     
+          <div className="sm:flex sm:w-full   sm:p-[10px] ">
+
+          {/* <div className="sm:shadow-xl shadow-cyan-500/50 overflow-hidden absolute rounded-[50%] ">
+    <Image
+      src={user}
+      alt="User Image"
+      className="object-cover w-[20%] "
+    />
+  </div> */}
             <div className="flex  sm:justify-center sm:flex-col items-center  flex-col sm:p-[100px] sm:w-[100%] ">
               <div class="concept concept-two" >
                 <div class="hover">
@@ -140,7 +149,7 @@ export default function Home() {
   </div>
 
   <div className="flex w-full sm:mb-0 mb-[40px] ">
-    <div className="flex sm:flex-row flex-col justify-between items-center sm:gap-0 gap-[30px] w-full ">
+    <div className="flex sm:flex-row flex-col justify-evenly items-center sm:gap-0 gap-[30px] w-full ">
       <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag1"></div>
       <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag2"></div>
       <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag3"></div>
@@ -152,15 +161,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex sm:w-[20%]   items-center justify-center sm:mb-[190px] sm:mr-[50px] ">
-  <div className="flex items-center justify-center rounded-full  sm:shadow-xl shadow-cyan-500/50 overflow-hidden  ">
-    <Image
-      src={user}
-      alt="User Image"
-      className="object-cover sm:h-full sm:w-full w-[100%] h-[100%]"
-    />
-  </div>
-</div>
 
 
 
