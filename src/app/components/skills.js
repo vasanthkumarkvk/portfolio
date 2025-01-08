@@ -23,9 +23,6 @@ export default function Skills() {
   return (
     <section id="skills" className="w-full bg-gray-100 py-10">
      <h1 className="text-4xl font-bold text-center mb-6"> Technical Skills</h1>
-<p className="text-center text-lg text-gray-700 mb-10">
-  Here are the core technologies, frameworks, and tools that power my web development expertise:
-</p>
 
       <div className="flex flex-col items-center">
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-8">
