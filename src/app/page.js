@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+
 import Image from "next/image";
 import { Dock } from "primereact/dock";
 import "primereact/resources/themes/saga-blue/theme.css"; // or your preferred theme
@@ -11,6 +13,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 import image1 from "../../img/about2.png";
 import user from "../../img/user.png";
+import project1 from "../../img/project1.png"
 
 
 import Skills from "./components/skills";
@@ -40,16 +43,21 @@ export default function Home() {
       icon: "pi pi-calendar", // Updated icon
       command: () => (window.location.hash = "/experience"),
     },
-   
+
     {
       label: "Contact",
       icon: "pi pi-envelope", // Updated icon
       command: () => (window.location.hash = "/contact"),
     },
   ];
+  const [activeTab, setActiveTab] = useState("basic"); // Default active tab
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab); // Change active tab
+  };
 
 
-  
+
 
   return (
     <main className="" id="home">
@@ -57,10 +65,10 @@ export default function Home() {
 
       <div className="w-full sm:h-[100vh] " id="banner_bg">
         <div className="flex flex-col-reverse  sm:flex-row sm:w-full sm:h-[100%] ">
-     
+
           <div className="sm:flex sm:w-full   sm:p-[10px] ">
 
-          {/* <div className="sm:shadow-xl shadow-cyan-500/50 overflow-hidden absolute rounded-[50%] ">
+            {/* <div className="sm:shadow-xl shadow-cyan-500/50 overflow-hidden absolute rounded-[50%] ">
     <Image
       src={user}
       alt="User Image"
@@ -97,23 +105,23 @@ export default function Home() {
                   <h1>K</h1>
                 </div>
               </div>
-  
+
 
               <div className="text-white font-bold text-[15px] sm:text-[20px] text-center ">
                 "Hi, I'm   <div class="concept concept-two flex" id="animate_name">
-  <span class="animate-letter">V</span>
-  <span class="animate-letter">A</span>
-  <span class="animate-letter">S</span>
-  <span class="animate-letter">A</span>
-  <span class="animate-letter">N</span>
-  <span class="animate-letter">T</span>
-  <span class="animate-letter">H</span>
+                  <span class="animate-letter">V</span>
+                  <span class="animate-letter">A</span>
+                  <span class="animate-letter">S</span>
+                  <span class="animate-letter">A</span>
+                  <span class="animate-letter">N</span>
+                  <span class="animate-letter">T</span>
+                  <span class="animate-letter">H</span>
 
-  <span class="animate-letter">K</span>
-</div>, a Full-Stack Developer passionate about building <br /> scalable web solutions."
-                </div>
+                  <span class="animate-letter">K</span>
+                </div>, a Full-Stack Developer passionate about building <br /> scalable web solutions."
+              </div>
 
-              <div className="flex flex-row items-center justify-center gap-[25px] sm:pt-[30px] pt-[10px] sm:pb-[0px] pb-[10px] w-[100%] ">
+              <div className="flex flex-row items-center justify-center gap-[25px] sm:pt-[20px] sm:pb-[20px] pt-[10px] sm:pb-[0px] pb-[10px] w-[100%] ">
                 <div className="transition duration-500 ease-out hover:scale-[130%] ">
                   <TiSocialLinkedinCircular
                     color="#0A66C2"
@@ -137,24 +145,24 @@ export default function Home() {
                   />
                 </div>
               </div>
-  
 
-              <div className="h-[100px] w-full">
-    <div className="flex items-center justify-center w-full h-full">
-      <div className="flex items-center text-[20px] p-[6px] transition-all duration-500 ease-out pr-[20px] pl-[20px] bg-white rounded-[10px] group hover:bg-black hover:text-white">
-        <button className="rounded-[10px]">Projects</button>
-        <FaLongArrowAltRight className="ml-2 transform transition-all duration-500 ease-out group-hover:translate-x-4" />
-      </div>
-    </div>
-  </div>
 
-  <div className="flex w-full sm:mb-0 mb-[40px] ">
-    <div className="flex sm:flex-row flex-col justify-evenly items-center sm:gap-0 gap-[30px] w-full ">
-      <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag1"></div>
-      <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag2"></div>
-      <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag3"></div>
-    </div>
-  </div>
+              <div className="h-[100px] w-full mb-[15px]">
+                <div className="flex items-center justify-center w-full h-full">
+                  <div className="flex items-center text-[20px] p-[6px] transition-all duration-500 ease-out pr-[20px] pl-[20px] bg-white rounded-[10px] group hover:bg-black hover:text-white">
+                    <button className="rounded-[10px]">Projects</button>
+                    <FaLongArrowAltRight className="ml-2 transform transition-all duration-500 ease-out group-hover:translate-x-4" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex w-full sm:mb-0 mb-[40px] ">
+                <div className="flex sm:flex-row flex-col justify-evenly items-center sm:gap-0 gap-[30px] w-full ">
+                  <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag1"></div>
+                  <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag2"></div>
+                  <div className="flex flex-col bg-white sm:h-[172px] h-[172px] w-[270px] sm:w-[300px] rounded-[11px]" id="bg_imag3"></div>
+                </div>
+              </div>
 
 
 
@@ -184,43 +192,305 @@ export default function Home() {
       </div>
 
 
-{/* about section */}
+      {/* about section */}
       <div className="w-full bg-green-200 mb-[15px]" id="about">
-  <div className="bg-white flex sm:flex-row flex-col items-center justify-center w-full sm:px-[100px] py-10">
-  <div className="w-full sm:w-1/2 mb-8 sm:mb-0 sm:pr-8 overflow-hidden">
-  <Image
-    src={image1}
-    alt="Vasanth"
-    className="rounded-r-[45px] w-full h-auto shadow-lg animate-moveLeftRight"
-  />
-</div>
+        <div className="bg-white flex sm:flex-row flex-col items-center justify-center w-full sm:px-[100px] py-10">
+          <div className="w-full sm:w-1/2 mb-8 sm:mb-0 sm:pr-8 overflow-hidden">
+            <Image
+              src={image1}
+              alt="Vasanth"
+              className="rounded-r-[45px] w-full h-auto shadow-lg animate-moveLeftRight"
+            />
+          </div>
 
-    <div className="w-full sm:w-1/2 text-center sm:text-left">
-      <h2 className="text-4xl font-bold mb-4 text-center" >About Me...</h2>
-      <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px] text-center">VASANTH - Full Stack Developer from Chennai</h3>
-      
-      <p className="text-lg text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7 text-center">
-      Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development. 
-        After completing my studies, I pursued programming and began my career as a web developer. 
-        Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in 
-        various technologies, including PHP, JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS, 
-        and AJAX. I also have experience with WordPress and have built both frontend and full-stack websites.
+          <div className="w-full sm:w-1/2 text-center sm:text-left">
+            <h2 className="text-4xl font-bold mb-4 text-center" >About Me...</h2>
+            <h3 className="text-[20px] mb-6 sm:pl-[50px] sm:pr-[50px] text-center">VASANTH - Full Stack Developer from Chennai</h3>
 
-        I’ve developed and published more than 15 websites online, demonstrating my expertise across 
-        diverse platforms and frameworks. My journey from web development to full stack has equipped me 
-        with a comprehensive understanding of the entire development process, from initial design to deployment.
-</p>
+            <p className="text-lg text-gray-700 sm:pl-[50px] sm:pr-[50px] leading-7 text-center">
+              Hello! I’m Vasanth, a BE graduate from Chennai with a strong passion for web development.
+              After completing my studies, I pursued programming and began my career as a web developer.
+              Currently, I’m a Full Stack Developer at VSM Global. Over the years, I’ve honed my skills in
+              various technologies, including PHP, JavaScript, React, Next.js, MySQL, Bootstrap, Tailwind CSS,
+              and AJAX. I also have experience with WordPress and have built both frontend and full-stack websites.
 
-
-    </div>
-  </div>
-</div>
-
-{/* Skill Section */}
-<Skills />
+              I’ve developed and published more than 15 websites online, demonstrating my expertise across
+              diverse platforms and frameworks. My journey from web development to full stack has equipped me
+              with a comprehensive understanding of the entire development process, from initial design to deployment.
+            </p>
 
 
-      <div className="w-full h-[400px] bg-yellow-200"> 
+          </div>
+        </div>
+      </div>
+
+      {/* Skill Section */}
+      <Skills />
+
+
+
+
+      <div className="text-center text-[36px] font-bold ">
+        <h2 className="m-[10px]">Projects</h2>
+      </div>
+      <div className="flex">
+        {/* Vertical Tab Buttons */}
+        <div className="w-64 bg-white shadow-lg rounded-lg p-4">
+          <div className="space-y-2">
+            <button
+              onClick={() => handleTabClick("basic")}
+              className={`w-full text-left text-[18px] py-2 px-4 rounded-lg hover:bg-gray-300 ${activeTab === "basic" ? "bg-gray-200" : "bg-white"
+                }`}
+            >
+              Basics
+            </button>
+            <button
+              onClick={() => handleTabClick("ecommerce")}
+              className={`w-full text-left py-2 px-4 rounded-lg hover:bg-gray-300 ${activeTab === "ecommerce" ? "bg-gray-200" : "bg-white"
+                }`}
+            >
+              E-Commerces
+            </button>
+            <button
+              onClick={() => handleTabClick("portfolio")}
+              className={`w-full text-left py-2 px-4 rounded-lg hover:bg-gray-300 ${activeTab === "portfolio" ? "bg-gray-200" : "bg-white"
+                }`}
+            >
+              Business 
+            </button>
+            <button
+              onClick={() => handleTabClick("wordpress")}
+              className={`w-full text-left py-2 px-4 rounded-lg hover:bg-gray-300 ${activeTab === "wordpress" ? "bg-gray-200" : "bg-white"
+                }`}
+            >
+              WordPress 
+            </button>
+
+            <button
+              onClick={() => handleTabClick("services")}
+              className={`w-full text-left py-2 px-4 rounded-lg hover:bg-gray-300 ${activeTab === "services" ? "bg-gray-200" : "bg-white"
+                }`}
+            >
+              Services Based
+            </button>
+
+            <button
+              onClick={() => handleTabClick("product")}
+              className={`w-full text-left py-2 px-4 rounded-lg hover:bg-gray-300 ${activeTab === "product" ? "bg-gray-200" : "bg-white"
+                }`}
+            >
+              Product Based
+            </button>
+          </div>
+        </div>
+
+        {/* Tab Content */}
+        <div className="ml-4 p-4 w-full">
+          {/* Basic Projects Tab */}
+          {activeTab === "basic" && (
+            <div className="tab-content">
+              <div className="w-full mb-6">
+                {/* Full-width Image */}
+                <div className="w-full max-h-[500px] overflow-y-scroll flex items-center  flex-col">
+
+                  <div className="w-[80%] shadow-xl p-[20px] " >
+                    <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                    <Image
+                      src={project1}
+                      alt="Full Width Project Image"
+                      className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                    />
+                  </div>
+
+                  <div className="w-[80%] shadow-xl p-[20px] mt-[100px]" >
+                  <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                    <Image
+                      src={project1}
+                      alt="Full Width Project Image"
+                      className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                    />
+                  </div>
+
+
+                  
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* E-Commerce Projects Tab */}
+          {activeTab === "ecommerce" && (
+             <div className="tab-content">
+             <div className="w-full mb-6">
+               {/* Full-width Image */}
+               <div className="w-full max-h-[500px] overflow-y-scroll flex items-center  flex-col">
+
+                 <div className="w-[80%] shadow-xl p-[20px] " >
+                   <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                   <Image
+                     src={project1}
+                     alt="Full Width Project Image"
+                     className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                   />
+                 </div>
+
+                 <div className="w-[80%] shadow-xl p-[20px] mt-[100px]" >
+                 <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                   <Image
+                     src={project1}
+                     alt="Full Width Project Image"
+                     className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                   />
+                 </div>
+
+
+                 
+               </div>
+             </div>
+           </div>
+          )}
+
+          {/* Portfolio Projects Tab */}
+          {activeTab === "portfolio" && (
+            <div className="tab-content">
+            <div className="w-full mb-6">
+              {/* Full-width Image */}
+              <div className="w-full max-h-[500px] overflow-y-scroll flex items-center  flex-col">
+
+                <div className="w-[80%] shadow-xl p-[20px] " >
+                  <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+                <div className="w-[80%] shadow-xl p-[20px] mt-[100px]" >
+                <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+
+                
+              </div>
+            </div>
+          </div>
+          )}
+
+
+
+            {activeTab === "wordpress" && (
+            <div className="tab-content">
+            <div className="w-full mb-6">
+              {/* Full-width Image */}
+              <div className="w-full max-h-[500px] overflow-y-scroll flex items-center  flex-col">
+
+                <div className="w-[80%] shadow-xl p-[20px] " >
+                  <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+                <div className="w-[80%] shadow-xl p-[20px] mt-[100px]" >
+                <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+
+                
+              </div>
+            </div>
+          </div>
+          )}
+            {activeTab === "services" && (
+            <div className="tab-content">
+            <div className="w-full mb-6">
+              {/* Full-width Image */}
+              <div className="w-full max-h-[500px] overflow-y-scroll flex items-center  flex-col">
+
+                <div className="w-[80%] shadow-xl p-[20px] " >
+                  <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+                <div className="w-[80%] shadow-xl p-[20px] mt-[100px]" >
+                <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+
+                
+              </div>
+            </div>
+          </div>
+          )}
+            {activeTab === "product" && (
+            <div className="tab-content">
+            <div className="w-full mb-6">
+              {/* Full-width Image */}
+              <div className="w-full max-h-[500px] overflow-y-scroll flex items-center  flex-col">
+
+                <div className="w-[80%] shadow-xl p-[20px] " >
+                  <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+                <div className="w-[80%] shadow-xl p-[20px] mt-[100px]" >
+                <h2 className="text-xl font-semibold"><a href="#">Title</a></h2>
+
+                  <Image
+                    src={project1}
+                    alt="Full Width Project Image"
+                    className="object-cover w-[100%] h-auto mt-[20px] rounded-[7px]"
+                  />
+                </div>
+
+
+                
+              </div>
+            </div>
+          </div>
+          )}
+        </div>
+      </div>
+
+
+      <div className="w-full h-[400px] bg-yellow-200">
 
       </div>
     </main>
