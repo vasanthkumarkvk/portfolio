@@ -124,7 +124,7 @@ div#animate_name{
 
     
   .p-dock .p-dock-list-container{
-    border-radius: 17px;
+    border-radius: 10px 10px 0px 0px;
     padding: 0px;
     width: 100%;
    
@@ -148,15 +148,29 @@ div#animate_name{
 
   .p-dock .p-dock-action {
     width: 3rem;
-    height: 25px !important;
+    height: 40px !important;
 }
   
+@media (min-width:700px) {
+
+  .p-dock .p-dock-action {
+    width: 3rem;
+    height: 25px !important;
+}
+.custom-dock .p-dock-item .pi {
+  font-size: 18px;
+}
+.custom-dock .p-dock-item:hover .pi {
+  font-size: 19px;
+}
+  
+}
 
 /* Custom CSS for Dock component */
 .custom-dock .p-dock-item .pi {
   cursor: pointer; /* Pointer cursor for clickable items */
   transition: color 0.3s ease ; /* Smooth color transition */
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .custom-dock .p-dock-item .pi-home {
@@ -183,7 +197,7 @@ div#animate_name{
 .custom-dock .p-dock-item:hover .pi {
   transform: scale(1.2); /* Slightly enlarge on hover */
   color: rgb(255, 255, 255);
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .custom-shape-divider-bottom-1725359123 {
